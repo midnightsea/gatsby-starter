@@ -25,7 +25,7 @@ jobs:
       run: npm install
     
     - name: npm build and deploy
-      run: npx gatsby build --prefix-paths && gh-pages -d public -r https://${{ secrets.ACCESS_TOKEN }}@github.com/midnightsea/gatsby-starter.git
+      run: npx gatsby build --prefix-paths && npx gh-pages -d public -r https://${{ secrets.ACCESS_TOKEN }}@github.com/midnightsea/gatsby-starter.git
         
     # - uses: enriikke/gatsby-gh-pages-action@v2
     # # Runs a single command using the runners shell
