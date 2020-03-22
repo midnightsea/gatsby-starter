@@ -20,8 +20,9 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    - run: npm install
-    - run: gatsby build --prefix-paths && gh-pages -d public -r https://${{ secrets.ACCESS_TOKEN }}@github.com/midnightsea/gatsby-starter.git
+    - run: |
+        npm install
+        gatsby build --prefix-paths && gh-pages -d public -r https://${{ secrets.ACCESS_TOKEN }}@github.com/midnightsea/gatsby-starter.git
     # - uses: enriikke/gatsby-gh-pages-action@v2
     # # Runs a single command using the runners shell
     #   name: build and deploy gatsby
