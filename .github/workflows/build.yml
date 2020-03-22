@@ -21,6 +21,9 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
+    - name: set git config
+      run: git config user.email "bot@runner.com" && git config user.name "CICD Pipeline"
+
     - name: npm install
       run: npm install
     
